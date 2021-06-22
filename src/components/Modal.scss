@@ -13,7 +13,6 @@
   @include cardBox();
   width: 100%;
   max-width: $max-card-width;
-
   @include breakpoint("max-card") {
     width: 95%;
   }
@@ -29,7 +28,7 @@
 
 .Modal__body {
   @include clear-both();
-  padding: 40px 24px;
+  padding: 24px 24px;
 }
 
 .Modal__close {

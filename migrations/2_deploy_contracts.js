@@ -1,27 +1,27 @@
-const Klaystagram = artifacts.require('./Klaystagram.sol')
+const ContentManagement = artifacts.require('./ContentManagement.sol')
 const fs = require('fs')
 
 module.exports = function (deployer) {
-  deployer.deploy(Klaystagram)
+  deployer.deploy(ContentManagement)
     .then(() => {
-    if (Klaystagram._json) {
+    if (ContentManagement._json) {
       // 1. Record recently deployed contract's abi file to 'deployedABI'
       fs.writeFile(
         'deployedABI',
-        JSON.stringify(Klaystagram._json.abi, 2),
+        JSON.stringify(ContentManagement._json.abi, 2),
         (err) => {
           if (err) throw err
-          console.log(`The abi of ${Klaystagram._json.contractName} is recorded on deployedABI file`)
+          console.log(`The abi of ${ContentManagement._json.contractName} is recorded on deployedABI file`)
         })
     }
 
     // 2. Record recently deployed contract's address to 'deployedAddress'
     fs.writeFile(
       'deployedAddress',
-      Klaystagram.address,
+      ContentManagement.address,
       (err) => {
         if (err) throw err
-        console.log(`The deployed contract address * ${Klaystagram.address} * is recorded on deployedAddress file`)
+        console.log(`The deployed contract address * ${ContentManagement.address} * is recorded on deployedAddress file`)
     })
   })
 }

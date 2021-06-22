@@ -45,7 +45,7 @@ module.exports = merge(baseConfig, {
       title: 'dev',
       template: path.resolve(__dirname, 'static/index.html'),
       inject: true,
-      origin: `http://localhost:8888/`,
+      origin: `http://localhost:8000/`,
     }),
     new DefinePlugin({
       DEV: true,

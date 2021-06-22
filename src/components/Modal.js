@@ -16,7 +16,6 @@ const Modal = ({ modal }) => (
   )
 )
 
-
 const mapStateToProps = (state) => ({
   modal: state.ui.modal,
 })

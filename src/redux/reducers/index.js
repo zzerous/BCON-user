@@ -1,14 +1,14 @@
 import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux'
-import auth from './auth'
+import login from './login'
 import ui from './ui'
-import photos from './photos'
+import contents from './contents'
 
 const reducer = combineReducers({
   routing: routerReducer,
-  auth,
+  login,
   ui,
-  photos,
+  contents,
 })
 
 export default reducer
